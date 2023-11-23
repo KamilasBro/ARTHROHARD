@@ -1,0 +1,112 @@
+@import "../../scssPartials/_colors";
+@import "../../scssPartials/_fontWeights";
+@import "../../scssPartials/_flexCenter";
+@keyframes bgAnim{
+    from{
+        background-color: transparent;
+    }to{}
+}
+@keyframes innerEnter{
+    from{
+        height: 0px;
+        width: 0px;
+    }to{}
+}
+@keyframes textAnim{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    @include flexCenter;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    animation: bgAnim 300ms;
+}
+.popup-inner{
+    height: 285px;
+    width: 843px;
+
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+
+    background: #FFF;
+    
+
+    animation: innerEnter 300ms ;
+}
+.props-wrap{
+    display: flex;
+    justify-content: space-between;
+
+    margin-inline: 20px;
+    margin-block: 8px;
+
+    font-size: 31px;
+
+    animation: textAnim 1s;
+}
+.popup-prop:nth-child(2){
+    margin-top: 63px;
+    margin-bottom: 55px;
+}
+.close-btn{
+    cursor: pointer;
+}
+@media (max-width: 1600px){
+    .popup-inner{
+        height: 285px;
+        width: 800px;
+    }
+    .props-wrap{
+        font-size: 28px;
+    }
+}
+@media (max-width: 1440px){
+    .popup-inner{
+        height: 240px;
+        width: 720px;
+    }
+    .props-wrap{
+        font-size: 25px;
+    }
+}
+@media (max-width: 1280px){
+    .popup-inner{
+        height: 210px;
+        width: 700px;
+    }
+    .props-wrap{
+        font-size: 23px;
+    }
+    .popup-prop:nth-child(2){
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        margin-block: 40px;
+    }
+}
+@media (max-width: 1024px){
+    .popup-inner{
+        height: 100%;
+        width: 100%;
+
+        border-radius: 0;
+    }
+}
+@media (max-width: 600px){
+    .props-wrap{
+        font-size: 20px;
+    }
+}

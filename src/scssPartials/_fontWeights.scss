@@ -1,0 +1,8 @@
+$font-weights:(
+    "light": 400,
+    "medium": 450,
+    "bold": 700
+);
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
