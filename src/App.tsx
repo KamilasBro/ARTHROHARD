@@ -6,13 +6,10 @@ import Products from "./components/Products/Products"
 import Shapes1 from "./images/shapes1.png"
 
 export default function App() {
-  //starałem się nie passować żadnych propów do komponentów więc wszystko tutaj jest
-  //elegancko
+// I tried not to pass any props to the components, so everything here is neatly self-contained.
 
-  //docelowo miałem zamknąć całość prócz navbara w tagu <main> 
-  //ale wyszło parę komplikacji i stwierdziłem że tak będzie lepiej jak jest
-
-  //nazwy komponentów zwyczajnie przetłumaczone na angielski
+// Originally, the plan was to encapsulate everything except the navbar within the <main> tag.
+// However, there were a few complications, and I decided that this approach would be better as it is.
   return (
     <>
       <Navbar/>
